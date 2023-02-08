@@ -56,7 +56,7 @@ namespace Numberchallenge
             {
                 if (i % small == 0)
                 {
-                    sum += i;
+                    sum = sum + i;
                 }
             }
             #endregion
