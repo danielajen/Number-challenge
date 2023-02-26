@@ -40,34 +40,33 @@ namespace Numberchallenge
             Console.WriteLine("The first number is: " + num1);
             Console.WriteLine("The second number is: " + num2);
 
-            //check small
-            #region math :(
-            int small;
-            if ( num1 < num2)
+            // check which is smaller
+            switch (num1 > num2)
             {
-                small = num1;
+                case true:
+                    int temp = num1;
+                    num1 = num2;
+                    num2 = temp;
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                small = num2;
-            }
+
+            // check sum
+            int small = num1;
             int sum = 0;
-            for (int i = small; i<= num1; i++)
+            for (int i = small; i <= num2; i++)
             {
                 if (i % small == 0)
                 {
                     sum = sum + i;
                 }
             }
-            #endregion
 
-            Console.WriteLine( " sum between " + num1 + " and "+ num2 + " that are divdible by " + small + " equals " + sum);
-           ;
+            Console.WriteLine("Sum between " + num1 + " and " + num2 + " that are divisible by " + small + " equals " + sum);
         }
-
     }
-  }
-  
+}
  
    
 
